@@ -1,0 +1,81 @@
+@use '../abstracts' as *;
+
+.footer {
+  @include reset;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'social social'
+    'contacts logo';
+  row-gap: 30px;
+
+  &__links-wrapper {
+    @include reset;
+    @include flex-column;
+    align-self: center;
+    gap: 20px;
+    grid-area: social;
+  }
+
+  &__links-title {
+    @include reset;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  &__links-list {
+    @include reset-list;
+    @include flex-row-center;
+    gap: 20px;
+  }
+
+  &__links-list-item {
+    @include reset;
+  }
+
+  &__contacts-wrapper {
+    @include reset;
+    @include flex-column;
+    grid-area: contacts;
+    justify-self: flex-start;
+    align-self: center;
+  }
+
+  &__contacts-label {
+    @include reset;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: $color-white;
+    opacity: .5;
+  }
+
+  &__contact-link {
+    @include reset;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-white;
+    text-decoration: none;
+    font-style: normal;
+
+    &:visited {
+      color: $color-white;
+    }
+
+    &_type_email {
+      text-decoration: underline;
+    }
+  }
+
+  &__logo-wrapper {
+    @include reset;
+    grid-area: logo;
+    justify-self: flex-end;
+    align-self: center;
+  }
+}

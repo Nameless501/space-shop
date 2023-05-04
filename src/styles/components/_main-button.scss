@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.main-button {
+  @include reset-button;
+  @include flex-row-center;
+  background: linear-gradient(87.23deg, rgba(128, 26, 179, 0) -91.42%, #4C4CFF 99.79%);
+  border-radius: 4px;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__text {
+    @include reset;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &_place_header {
+    width: 180px;
+    height: 40px;
+  }
+
+  &_place_new-card {
+    width: 100%;
+    height: 40px;
+  }
+
+  &_place_daily-card {
+    width: 280px;
+    height: 60px;
+  }
+}

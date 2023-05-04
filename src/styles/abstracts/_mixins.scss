@@ -1,0 +1,83 @@
+@mixin font-face($family, $weight, $file-name) {
+  font-family: $family;
+  font-style: normal;
+  font-weight: $weight;
+  font-display: swap;
+  src: url('/src/vendor/fonts/#{$file-name}.woff') format('woff');
+}
+
+@mixin abs-position ($top, $left, $bottom, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin breakpoint($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin reset-list {
+  @include reset;
+  list-style: none;
+}
+
+@mixin reset-button {
+  @include reset;
+  background-color: transparent;
+  border: 0;
+}
+
+// fonts
+
+@mixin font-params($family, $size, $weight,  $lh, $color: false) {
+  font-family: #{$family}, Arial, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+  @if $color { color: $color; }
+}
+
+@mixin text-shorten {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// flexbox
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-center {
+  @include flex-row-center;
+  flex-direction: column;
+}
+
+@mixin flex-row-space-between {
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,37 @@
+@import './base/normalize';
+
+@import './base/fonts';
+
+@import './base/window';
+
+@import './pages/main';
+
+// layout
+
+@import './layout/header';
+
+@import './layout/content';
+
+@import './layout/footer';
+
+@import './layout/new';
+
+@import './layout/daily';
+
+// components
+
+@import './components/main-button';
+
+@import './components/logo-link';
+
+@import './components/social-link';
+
+@import './components/new-card';
+
+@import './components/daily-card';
+
+@import './components/rating-stars';
+
+@import './components/active-sales';
+
+@import './components/section-title';

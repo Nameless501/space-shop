@@ -1,0 +1,7 @@
+mixin main-button(text, place, href)
+  if href
+    a.main-button(href=href, class='main-button_place_'+place)
+      span.main-button__text= text
+  else
+    button.main-button(class='main-button_place_'+place)
+      span.main-button__text= text

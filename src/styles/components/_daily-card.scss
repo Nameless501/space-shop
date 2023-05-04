@@ -1,0 +1,159 @@
+@use '../abstracts' as *;
+
+.daily-card {
+  @include reset;
+  padding-bottom: 35px;
+  width: 100%;
+  background-color: $color-card;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 305px 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "image info"
+    "controls controls";
+  column-gap: 10px;
+
+  &__image {
+    @include reset;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    grid-area: image;
+  }
+
+  &__info-column {
+    @include reset;
+    padding-top: 30px;
+    width: 100%;
+    @include flex-column;
+    align-items: flex-start;
+    grid-area: info;
+    gap: 17px;
+  }
+
+  &__info-wrapper {
+    @include reset;
+    @include flex-column;
+    gap: 10px;
+  }
+
+  &__description-wrapper {
+    @include reset;
+    @include flex-column;
+    gap: 5px;
+  }
+
+  &__name-wrapper {
+    @include reset;
+    @include flex-row;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+  }
+
+  &__name {
+    @include reset;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-black;
+  }
+
+  &__description {
+    @include reset;
+    color: $color-black;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  &__prices-wrapper {
+    @include reset;
+    @include flex-column;
+    gap: 22px;
+  }
+
+  &__prices {
+    @include reset;
+    @include flex-row;
+  }
+
+  &__prices-list {
+    @include reset-list;
+    @include flex-row;
+    align-items: center;
+  }
+
+  &__prices-list-item {
+    @include reset;
+    @include flex-row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60px;
+    height: 20px;
+  }
+
+  &__last-price {
+    @include reset;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration-line: line-through;
+    color: $color-grey;
+  }
+
+  &__current-price {
+    @include reset;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-black;
+  }
+
+  &__prices-sale {
+    @include reset;
+    width: 60px;
+    height: 24px;
+    background-color: $color-red;
+    border-radius: 4px;
+    @include flex-row-center;
+  }
+
+  &__prices-sale-amount {
+    @include reset;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-white;
+  }
+
+  &__button-wrapper {
+    @include reset;
+    @include flex-column;
+    align-items: center;
+    align-self: center;
+    gap: 10px;
+    grid-area: controls;
+  }
+
+  &__promocode-wrapper {
+    @include reset;
+    @include flex-row-center;
+    width: 280px;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px dashed $color-black;
+  }
+
+  &__promocode {
+    @include reset;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+}

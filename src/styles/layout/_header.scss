@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.header {
+  @include reset;
+  width: 100%;
+  @include flex-row-space-between;
+}

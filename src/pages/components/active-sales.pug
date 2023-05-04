@@ -1,0 +1,12 @@
+mixin active-sales(sales, total)
+  ul.active-sales
+
+    each sale in sales
+      li.active-sales__item
+        p.active-sales__item-name= sale.name
+        p.active-sales__item-amount= sale.amount
+
+    li.active-sales__item
+      p.active-sales__item-name
+        | Вы эĸономите
+      p.active-sales__item-amount.active-sales__item-amount_type_total= total

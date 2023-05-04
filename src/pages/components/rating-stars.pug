@@ -1,0 +1,11 @@
+- let count = 1;
+
+mixin rating-stars(current, total)
+  ul.rating-stars
+    while count <= total
+      li.rating-stars__item
+        if count <= current
+          img.rating-stars__icon(src="assets/icon_spaceship.png", alt="Иконка рейтинга")
+        else
+          img.rating-stars__icon.rating-stars__icon_type_fade(src="assets/icon_spaceship.png", alt="Иконка рейтинга")
+        - count += 1;

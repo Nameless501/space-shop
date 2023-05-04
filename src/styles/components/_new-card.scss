@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+
+.new-card {
+  @include reset;
+  padding: 0 10px 10px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: $color-card;
+  @include flex-column;
+  align-items: center;
+  gap: 10px;
+
+  &__figure {
+    @include reset;
+    @include flex-column;
+  }
+
+  &__image {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: calc(100% + 20px);
+    object-fit: contain;
+    object-position: center;
+    transform: translateX(-10px);
+  }
+
+  &__description {
+    @include reset;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $color-black;
+  }
+
+  &__prices {
+    @include reset;
+    @include flex-row-center;
+    width: 100%;
+  }
+
+  &__price-wrapper {
+    @include reset;
+    width: 50%;
+    height: 30px;
+    @include flex-row-center;
+  }
+
+  &__last-price {
+    @include reset;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration-line: line-through;
+    color: $color-grey;
+  }
+
+  &__current-price {
+    @include reset;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-black;
+  }
+}

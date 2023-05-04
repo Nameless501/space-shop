@@ -1,0 +1,35 @@
+- let count = 0;
+
+mixin daily-card(data)
+  article.daily-card
+    img.daily-card__image(src=data.img, alt="Картинка корабля")
+    div.daily-card__info-column
+
+      div.daily-card__info-wrapper
+        include rating-stars.pug
+        +rating-stars(data.rating.current, data.rating.total)
+
+        div.daily-card__description-wrapper
+          div.daily-card__name-wrapper
+            h3.daily-card__name= data.name
+          p.daily-card__description= data.description
+
+      div.daily-card__prices-wrapper
+        div.daily-card__prices
+          ul.daily-card__prices-list
+            each price in data.prices.lastPrices
+              li.daily-card__prices-list-item
+                span.daily-card__last-price= price
+            li.daily-card__prices-list-item
+              span.daily-card__current-price= data.prices.currentPrice
+          div.daily-card__prices-sale
+            span.daily-card__prices-sale-amount= data.prices.sale
+
+        include active-sales.pug
+        +active-sales(data.sales.list, data.sales.total)
+
+    div.daily-card__button-wrapper
+      div.daily-card__promocode-wrapper
+        span.daily-card__promocode= data.promocode
+      include main-button.pug
+      +main-button('Заказать', 'daily-card')

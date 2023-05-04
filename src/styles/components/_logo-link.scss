@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.logo-link {
+  @include reset;
+  display: block;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__image {
+    @include reset;
+    display: block;
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+    object-position: center;
+  }
+}

@@ -1,0 +1,29 @@
+-
+  const links = [
+    { alt: 'логотип youtube', src: 'assets/icon_youtube.svg', href: 'https://www.youtube.com/' },
+    { alt: 'логотип facebook', src: 'assets/icon_facebook.svg', href: 'https://www.facebook.com/' },
+    { alt: 'логотип instagram', src: 'assets/icon_instagram.svg', href: 'https://www.instagram.com/' },
+  ];
+
+footer.footer
+  div.footer__links-wrapper
+    h3.footer__links-title
+      | Присоединяйтесь к нам в соц. сетях!
+    ul.footer__links-list
+      each link in links
+        li.footer__links-list-item
+          include ../components/social-link.pug
+          +social-link(link.src, link.alt, link.href)
+
+  div.footer__contacts-wrapper
+    p.footer__contacts-label
+      | Контакты:
+    address
+      a.footer__contact-link.footer__contact-link_type_telephone(href='tel:+01233456789')
+        | 0 (123) 345-67-89
+      br
+      a.footer__contact-link.footer__contact-link_type_email(href='mailto:contact@spaceshop.sp')
+        | contact@spaceshop.sp
+
+  div.footer__logo-wrapper
+    include ../components/logo-link.pug

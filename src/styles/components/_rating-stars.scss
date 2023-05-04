@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.rating-stars {
+  @include reset-list;
+  @include flex-row;
+  gap: 8px;
+
+  &__item {
+    @include reset;
+  }
+
+  &__icon {
+    @include reset;
+    display: block;
+    width: 28px;
+    height: 28px;
+
+    &_type_fade {
+      opacity: .2;
+    }
+  }
+}

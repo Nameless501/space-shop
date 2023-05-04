@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+.main {
+  max-width: $max-content-width;
+  min-width: $max-content-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 190px 26px;
+  box-sizing: border-box;
+  position: relative;
+  position: relative;
+
+  &__content {
+    margin: 40px 0 60px;
+  }
+}
+
+.main::before {
+  content: '';
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  height: 660px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  background-image: url('./assets/background.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.main::after {
+  content: '';
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(19, 19, 22, 0) 0%, #131316 100%);
+}

@@ -1,0 +1,16 @@
+mixin new-card(img, text, currentPrice, lastPrice)
+  article.new-card
+
+    figure.new-card__figure
+      img.new-card__image(src=img, alt="Изображение корабля")
+      figcaption.new-card__description= text
+
+    div.new-card__prices
+      if lastPrice
+        div.new-card__price-wrapper
+          span.new-card__last-price= lastPrice
+      div.new-card__price-wrapper
+        span.new-card__current-price= currentPrice
+
+    include main-button.pug
+    +main-button('Заказать', 'new-card')

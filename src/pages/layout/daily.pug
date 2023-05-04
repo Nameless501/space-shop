@@ -1,0 +1,30 @@
+-
+  const dailyShip = {
+    img: 'assets/ship_daily.png',
+    rating: {
+      current: '4',
+      total: '5',
+    },
+    name: '«Цербер»',
+    description: 'Маневренное патрульное судно, предназначенное для охраны систем.',
+    prices: {
+      lastPrices: ['$1 600', '$1 400'],
+      currentPrice: '$800',
+      sale: '50%'
+    },
+    sales: {
+      total: '$800',
+      list: [
+        {name: 'Скидка SPACESHOP', amount: '$200'},
+        {name: 'Промокод «КОРАБЛЬДНЯ3»', amount: '$600'},
+      ]
+    },
+    promocode: 'КОРАБЛЬДНЯ3',
+  }
+
+section.daily-section
+  include ../components/section-title.pug
+  +section-title('Корабль дня:')
+
+  include ../components/daily-card.pug
+  +daily-card(dailyShip)

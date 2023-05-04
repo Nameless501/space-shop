@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+@font-face {
+  @include font-face('Proxima Nova Condensed', 400, 'Proxima-Nova-Condensed-Regular');
+}
+
+@font-face {
+  @include font-face('Proxima Nova Condensed', 600, 'Proxima-Nova-Condensed-Semibold');
+}
+
+@font-face {
+  @include font-face('Proxima Nova Condensed', 900, 'Proxima-Nova-Condensed-Black');
+}
+
+@font-face {
+  @include font-face('Proxima Nova', 400, 'Proxima-Nova-Regular');
+}
+
+@font-face {
+  @include font-face('Proxima Nova', 600, 'Proxima-Nova-Semibold');
+}

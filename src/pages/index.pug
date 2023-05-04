@@ -1,0 +1,21 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='icon' type='image/x-icon' href='favicon.ico')
+
+    title Space-Shop
+
+    link(rel='stylesheet' href='./styles.css')
+
+  body.window
+    div.main
+
+      include layout/header.pug
+
+      main.content.main__content
+        include layout/new.pug
+        include layout/daily.pug
+
+      include layout/footer.pug

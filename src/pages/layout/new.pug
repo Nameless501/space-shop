@@ -1,0 +1,40 @@
+-
+  const newShips = [
+    {
+      img: 'assets/ship_new_1.png',
+      text: '«Чегантина» – парадный боевой крейсер',
+      currentPrice: '$999',
+      lastPrice: '$1 299',
+    },
+    {
+      img: 'assets/ship_new_2.png',
+      text: 'Космический корабль синего цвета (c локаторами)',
+      currentPrice: '$1 299',
+      lastPrice: '$1 899'
+    },
+    {
+      img: 'assets/ship_new_3.png',
+      text: '«Ночной ястреб» – Надежный корабль-перехватчик',
+      currentPrice: '$799',
+    },
+    {
+      img: 'assets/ship_new_4.png',
+      text: '«Карающий луч» – Полнофункциональный боевой корабль низкой ценовой категории',
+      currentPrice: '$479',
+    },
+    {
+      img: 'assets/ship_new_5.png',
+      text: '«Антидоминатор» – Дорогое и эффективное оружие против доминаторов.',
+      currentPrice: '$1 779',
+    },
+  ]
+
+section.new-section
+  include ../components/section-title.pug
+  +section-title('Наши новинки:')
+
+  ul.new-section__cards-list
+    each ship in newShips
+      li.new-section__cards-list-item
+        include ../components/new-card.pug
+        +new-card(ship.img, ship.text, ship.currentPrice, ship.lastPrice)

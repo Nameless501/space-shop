@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.active-sales {
+  @include reset-list;
+  @include flex-column;
+
+  &__item {
+    @include reset-list;
+    width: 100%;
+    max-width: 240px;
+    height: 25px;
+    @include flex-row-space-between;
+  }
+
+  &__item-name {
+    @include reset;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: $color-black;
+  }
+
+  &__item-amount {
+    @include reset;
+    color: $color-black;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+
+    &_type_total {
+      font-weight: 700;
+      color: $color-red;
+    }
+  }
+}
